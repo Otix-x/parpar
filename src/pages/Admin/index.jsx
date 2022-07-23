@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Container from '../../components/Container';
 import MainLayout from '../../layouts/MainLayout';
-import Button from '../../../../client/src/components/Button';
+import Button from '../../components/Button';
 
 const server_url = 'http://localhost:5000';
 
@@ -78,9 +78,7 @@ const Admin = () => {
                   <p className='line-clamp-2'>{order.orderID}</p>
                 </td>
                 <td className={`px-2 ${paddingY}`}>
-                  <p className='whitespace-nowrap text-center'>
-                    {order.customer.phone}
-                  </p>
+                  <p className='whitespace-nowrap text-center'>{order.customer.phone}</p>
                 </td>
                 <td className={`px-2 ${paddingY}`}>
                   <p className='whitespace-nowrap text-center'>
@@ -91,16 +89,15 @@ const Admin = () => {
                   <p className='whitespace-nowrap text-center'>20</p>
                 </td>
                 <td className={`px-2 ${paddingY}`}>
-                  <p className='whitespace-nowrap text-center'>
-                    {order.orderDate}
-                  </p>
+                  <p className='whitespace-nowrap text-center'>{order.orderDate}</p>
                 </td>
                 <td className={paddingY}>
                   <Button
                     onClick={() => {
                       handleConfirm(order.orderID);
                     }}
-                    className='bg-[#42cf99] text-lg px-2 text-white cursor-pointer hover:text-green-700'>
+                    className='bg-[#42cf99] text-lg px-2 text-white cursor-pointer hover:text-green-700'
+                  >
                     Confirm
                   </Button>
                 </td>
@@ -109,7 +106,8 @@ const Admin = () => {
                     onClick={() => {
                       handleCancel(order.orderID);
                     }}
-                    className='bg-[#e67a84] text-lg px-2 text-white cursor-pointer hover:text-red-700'>
+                    className='bg-[#e67a84] text-lg px-2 text-white cursor-pointer hover:text-red-700'
+                  >
                     Cancel
                   </Button>
                 </td>
