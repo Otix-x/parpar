@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Container from '../../components/Container';
 import MainLayout from '../../layouts/MainLayout';
-import Button from '../../../../client/src/components/Button';
+import Button from '../../components/Button';
 
 const server_url = 'http://localhost:5000';
 
